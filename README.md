@@ -1,71 +1,65 @@
 # QuickCart Frontend
 
-E-commerce application built with Next.js 14+ App Router, TypeScript, Tailwind CSS, and Zustand for state management.
+Aplicación de e-commerce construida con Next.js 14+ App Router, TypeScript, Tailwind CSS y Zustand para gestión de estado.
 
-## 🚀 Features
+## 🚀 Características
 
-- **Modern Stack**: Next.js 14+ with App Router, React 19, TypeScript
-- **State Management**: Zustand with localStorage persistence
-- **UI Components**: shadcn/ui component library
-- **Styling**: Tailwind CSS with dark mode support
-- **Forms**: React Hook Form with Zod validation
-- **Security**: OWASP-compliant input sanitization, CSP headers
+- **Stack**: Next.js 14+ con App Router, React 19, TypeScript
+- **Gestión de Estado**: Zustand con persistencia en localStorage
+- **Componentes UI**: Biblioteca de componentes shadcn/ui
+- **Estilos**: Tailwind CSS con soporte de modo oscuro
+- **Formularios**: React Hook Form con validación Zod
+- **Seguridad**: Sanitización de inputs compatible con OWASP, headers CSP
 - **Testing**: Jest + React Testing Library
-- **Analytics**: Recharts for data visualization
-- **Payments**: Stripe integration (optional)
+- **Analytics**: Recharts para visualización de datos
+- **Pagos**: Integración con Stripe (opcional)
 
-## 📋 Prerequisites
+## 📋 Prerequisitos
 
-- Node.js 18+ or higher
-- pnpm (recommended) or npm
-- Backend API running (https://quickcartbackend.vercel.app)
+- Node.js 18+ o superior
+- pnpm (recomendado) o npm
+- API Backend ejecutándose (https://quickcartbackend.vercel.app)
 
-## 🛠️ Installation
+## 🛠️ Instalación
 
-1. Clone the repository:
+1. Clonar el repositorio:
 
 ```bash
 git clone <repository-url>
 cd QuickCart-Frontend
 ```
 
-2. Install dependencies:
+2. Instalar dependencias:
 
 ```bash
 pnpm install
 ```
 
-3. Create environment file:
+3. Crear archivo de variables de entorno:
 
 ```bash
 cp .env.example .env.local
 ```
 
-4. Configure environment variables in `.env.local`:
+## 🏃 Desarrollo
 
-```env
-NEXT_PUBLIC_API_BASE_URL=https://quickcartbackend.vercel.app/api/v1
-```
-
-## 🏃 Development
-
-Run the development server:
+Ejecutar el servidor de desarrollo:
 
 ```bash
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Abrir [http://localhost:3000](http://localhost:3000) en tu navegador.
 
 ## 🧪 Testing
 
-Run tests:
+Ejecutar tests:
 
 ```bash
 pnpm test
 ```
 
-Run tests in watch mode:
+Ejecutar tests en modo watch:
 
 ```bash
 pnpm test --watch
@@ -73,113 +67,76 @@ pnpm test --watch
 
 ## 🏗️ Build
 
-Create a production build:
+Crear un build de producción:
 
 ```bash
 pnpm build
 ```
 
-Start production server:
+Iniciar servidor de producción:
 
 ```bash
 pnpm start
 ```
 
-## 📦 Project Structure
+## 📦 Estructura del Proyecto
 
 ```
-├── app/                    # Next.js App Router pages
-│   ├── admin/             # Admin dashboard
-│   ├── auth/              # Authentication pages
-│   ├── cart/              # Shopping cart
-│   ├── checkout/          # Checkout flow
-│   ├── products/          # Product details
-│   ├── profile/           # User profile
-│   └── shop/              # Product listing
-├── components/            # React components
-│   ├── admin/             # Admin components
-│   ├── cart/              # Cart components
-│   ├── charts/            # Recharts visualizations
-│   ├── checkout/          # Checkout components
-│   ├── profile/           # Profile components
-│   ├── shop/              # Shop components
-│   └── ui/                # shadcn/ui components
-├── lib/                   # Utilities and libraries
-│   ├── api/               # API client functions
-│   ├── hooks/             # Custom React hooks
-│   ├── store.ts           # Zustand stores
-│   ├── types.ts           # TypeScript types
-│   ├── utils.ts           # Utility functions
-│   └── validators.ts      # Input validation
-├── __tests__/             # Jest tests
-└── public/                # Static assets
+├── app/                    # Páginas Next.js App Router
+│   ├── admin/             # Panel de administración
+│   ├── auth/              # Páginas de autenticación
+│   ├── cart/              # Carrito de compras
+│   ├── checkout/          # Flujo de checkout
+│   ├── products/          # Detalles de productos
+│   ├── profile/           # Perfil de usuario
+│   └── shop/              # Listado de productos
+├── components/            # Componentes React
+│   ├── admin/             # Componentes de admin
+│   ├── cart/              # Componentes de carrito
+│   ├── charts/            # Visualizaciones Recharts
+│   ├── checkout/          # Componentes de checkout
+│   ├── profile/           # Componentes de perfil
+│   ├── shop/              # Componentes de tienda
+│   └── ui/                # Componentes shadcn/ui
+├── lib/                   # Utilidades y librerías
+│   ├── api/               # Funciones cliente API
+│   ├── hooks/             # Hooks personalizados React
+│   ├── store.ts           # Stores Zustand
+│   ├── types.ts           # Tipos TypeScript
+│   ├── utils.ts           # Funciones utilitarias
+│   └── validators.ts      # Validación de inputs
+├── __tests__/             # Tests Jest
+└── public/                # Assets estáticos
 ```
 
-## 🔐 Security Features
+## 🔐 Características de Seguridad
 
-- **Input Sanitization**: OWASP-compliant sanitization for all user inputs
-- **CSP Headers**: Content Security Policy to prevent XSS attacks
-- **Secure Headers**: X-Frame-Options, X-Content-Type-Options, Referrer-Policy
-- **URL Validation**: Sanitization of URL parameters
-- **Error Handling**: Secure error messages without system details
+- **Sanitización de Inputs**: Sanitización compatible con OWASP para todos los inputs de usuario
+- **Headers CSP**: Content Security Policy para prevenir ataques XSS
+- **Headers Seguros**: X-Frame-Options, X-Content-Type-Options, Referrer-Policy
+- **Validación de URLs**: Sanitización de parámetros URL
+- **Manejo de Errores**: Mensajes de error seguros sin detalles del sistema
 
-## 🎨 Key Technologies
+## 🎨 Tecnologías Clave
 
-- **Next.js 16**: React framework with App Router
-- **TypeScript**: Type-safe development
-- **Tailwind CSS**: Utility-first CSS framework
-- **Zustand**: Lightweight state management
-- **shadcn/ui**: High-quality UI components
-- **React Hook Form**: Performant form handling
-- **Zod**: Schema validation
-- **Recharts**: Charts and data visualization
-- **Jest**: Testing framework
-- **React Testing Library**: Component testing
+- **Next.js 16**: Framework React con App Router
+- **TypeScript**: Desarrollo con tipado seguro
+- **Tailwind CSS**: Framework CSS utility-first
+- **Zustand**: Gestión de estado ligera
+- **shadcn/ui**: Componentes UI de alta calidad
+- **React Hook Form**: Manejo de formularios performante
+- **Zod**: Validación de esquemas
+- **Recharts**: Gráficos y visualización de datos
+- **Jest**: Framework de testing
+- **React Testing Library**: Testing de componentes
 
-## 🚀 Deployment
+## 📝 Variables de Entorno
 
-### Vercel (Recommended)
+Requeridas:
 
-1. Push your code to GitHub
-2. Import project in Vercel
-3. Configure environment variables
-4. Deploy
+- `NEXT_PUBLIC_API_BASE_URL`: URL del API Backend
 
-### Other Platforms
+Opcionales:
 
-Build the project and deploy the `.next` folder:
-
-```bash
-pnpm build
-```
-
-## 📝 Environment Variables
-
-Required:
-
-- `NEXT_PUBLIC_API_BASE_URL`: Backend API URL
-
-Optional:
-
-- `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY`: Stripe public key
-- `STRIPE_SECRET_KEY`: Stripe secret key (server-side only)
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License.
-
-## 🐛 Known Issues
-
-- Warning about `baseline-browser-mapping` being outdated (non-critical)
-
-## 📞 Support
-
-For issues and questions, please open an issue on GitHub.
+- `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY`: Clave pública de Stripe
+- `STRIPE_SECRET_KEY`: Clave secreta de Stripe (solo lado del servidor)
