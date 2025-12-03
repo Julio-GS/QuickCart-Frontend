@@ -50,7 +50,6 @@ export function OrderFilters({
           type="text"
           value={searchId}
           onChange={(e) => onSearchChange(e.target.value)}
-          placeholder="Ej: ORD-001"
         />
       </div>
     </div>

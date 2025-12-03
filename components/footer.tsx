@@ -133,8 +133,8 @@ export function Footer() {
 
         <div className="mt-8 border-t border-border pt-8 text-center text-sm text-muted-foreground">
           <p>
-            &copy; {new Date().getFullYear()} QuickCart. Todos los derechos
-            reservados.
+            &copy; {new Date().getFullYear()} QuickCart. Proyecto Demo. Sitio no
+            comercial.
           </p>
         </div>
       </div>
